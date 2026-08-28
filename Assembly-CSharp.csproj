@@ -56,6 +56,7 @@
     <Compile Include="Assets\MiddleScript.cs" />
     <Compile Include="Assets\spawner.cs" />
     <Compile Include="Assets\PipScript.cs" />
+    <Compile Include="Assets\backgropundScript.cs" />
     <Compile Include="Assets\biordScrript.cs" />
     <Compile Include="Assets\LogicScript.cs" />
     <Compile Include="Assets\MenuScript.cs" />
