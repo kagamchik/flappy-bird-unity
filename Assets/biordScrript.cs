@@ -46,6 +46,7 @@ public class biordScrript : MonoBehaviour
     {
         if ((transform.position.y > logic.border || transform.position.y < -logic.border ) && birdIsAlive)
         {
+            audioSource.PlayOneShot(deathSound);
             logic.gameOver();
             birdIsAlive = false;
             Time.timeScale = 0;
