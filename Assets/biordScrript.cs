@@ -7,6 +7,9 @@ public class biordScrript : MonoBehaviour
     public Rigidbody2D myRigidBody;
     public float  flapStrength;
     public bool birdIsAlive = true;
+    public AudioSource audioSource;
+    public AudioClip flapSound;
+    public AudioClip deathSound;
     // public float  border = 15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +24,7 @@ public class biordScrript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
             myRigidBody.linearVelocity = Vector2.up * flapStrength;
-            
+            audioSource.PlayOneShot(flapSound);
         }
         
         checkBorder();
@@ -33,6 +36,7 @@ public class biordScrript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        audioSource.PlayOneShot(deathSound);
         logic.gameOver();
         birdIsAlive = false;
         Time.timeScale = 0;
