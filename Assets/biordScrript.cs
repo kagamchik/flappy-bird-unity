@@ -10,6 +10,7 @@ public class biordScrript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip flapSound;
     public AudioClip deathSound;
+    public AudioClip CheckSound;
     // public float  border = 15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
